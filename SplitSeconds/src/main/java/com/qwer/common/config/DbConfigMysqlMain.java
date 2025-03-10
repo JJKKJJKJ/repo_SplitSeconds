@@ -16,11 +16,11 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@MapperScan(basePackages="com.sonjihye.demo.*"     						//#-->	*dao 찾는 영역
+@MapperScan(basePackages="com.qwer.*"     						//#-->	*dao 찾는 영역
         ,sqlSessionFactoryRef="sqlSessionFactoryMysqlMain")             //#-->
 @EnableTransactionManagement
 public class DbConfigMysqlMain {
-	 final String datasourceName = "datasourceMysqlMain";                //#-->
+	   final String datasourceName = "datasourceMysqlMain";                //#-->
 	    final String prefixName = "spring.datasource.mysql.main";           //#-->
 	    final String SqlSessionFactoryName = "sqlSessionFactoryMysqlMain";  //#-->
 	    final String SqlSessionName = "sqlSessionMysqlMain";                //#-->
@@ -48,6 +48,4 @@ public class DbConfigMysqlMain {
 	    public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory){
 	        return new SqlSessionTemplate(sqlSessionFactory);
 	    }
-	
-
 }
