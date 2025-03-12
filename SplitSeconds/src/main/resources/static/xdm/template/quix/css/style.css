@@ -14711,5 +14711,9 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
     background-color: #1b2b42; }
     [data-theme-version="dark"] .footer .copyright p {
       color: #fff; }
+	  
+	  input::placeholder {
+	      font-size: 0.9em;
+	  }
 
 /*# sourceMappingURL=style.css.map */

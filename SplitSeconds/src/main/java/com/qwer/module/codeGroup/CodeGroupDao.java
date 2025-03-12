@@ -9,7 +9,7 @@ public interface CodeGroupDao {
 	
 
 	public List<CodeGroupDto> selectList(); 
-	public CodeGroupDto selectOne(CodeGroupDto clubDto); 
-	public int insert(CodeGroupDto clubDto); 
+	public CodeGroupDto selectOne(CodeGroupDto codegroupDto); 
+	public int insert(CodeGroupDto codegroupDto); 
 	
 }

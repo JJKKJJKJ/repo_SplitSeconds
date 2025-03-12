@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.demo.module.codegroup.CodeGroupDao">
+<mapper namespace="com.qwer.module.codeGroup.CodeGroupDao">
 
-	<resultMap id="resultMapObj" type="com.example.demo.module.codegroup.CodeGroupDto"></resultMap>
+	<resultMap id="resultMapObj" type="com.qwer.module.codeGroup.CodeGroupDto"></resultMap>
 	   
 
 	  <select id="selectList" resultMap="resultMapObj">
@@ -25,7 +25,7 @@
 	  
 	  <insert id="insert"> 
 		insert into codegroup (				 
-				cgseq,
+				
 				cgAnotherseq,
 				cgName,
 			    cgNameEng,		
@@ -34,7 +34,7 @@
 			    cgExplanation,
 			    cgDelNy
 		 ) values (			 
-			#{cgseq},
+			
 			#{cgAnotherseq},
 			#{cgName},
 			#{cgNameEng},
