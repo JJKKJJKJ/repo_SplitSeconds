@@ -3,15 +3,24 @@ package com.qwer.module.codeGroup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class CodeGroupController {
 	@Autowired
 	CodeGroupService codeGroupService;
 	
+	
 	@RequestMapping(value = "/xdm/codegroup/CodeGroupXdmList")
-	public String codegroupXdmList(Model model) {
-		model.addAttribute("list",codeGroupService.selectList());
+	public String codegroupXdmList(CodeGroupVo vo , Model model) {
+		
+		vo.setParamsPaging(codeGroupService.selectOneCount());
+	
+//		int a = codeGroupService.selectOneCount();
+		
+		model.addAttribute("list",codeGroupService.selectList(vo));
+		model.addAttribute("vo",vo);
+		
 		return "xdm/codegroup/codegroupXdmList";
 	}
 	

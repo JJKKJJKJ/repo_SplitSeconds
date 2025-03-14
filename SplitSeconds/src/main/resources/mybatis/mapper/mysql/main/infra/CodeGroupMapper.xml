@@ -4,9 +4,24 @@
 <mapper namespace="com.qwer.module.codeGroup.CodeGroupDao">
 
 	<resultMap id="resultMapObj" type="com.qwer.module.codeGroup.CodeGroupDto"></resultMap>
+	
+	<sql id="selectCommon"> 
+		from codegroup 
+	<!--조건  / 이 테이블 컬럼을 설정 -->
+		where 1=1	<!-- 조건 -->
+			and cgdelNy = 0
+	</sql>
+	
+	<select id="selectOneCount" resultType="Integer">
+	           <!-- DAO함수 -->
+		SELECT COUNT(*) <!-- 데이터가 총 몇개가 있는지  -->
+		<include refid="selectCommon"/> <!-- include refid=이름은 해당되는 id를 이 위치에 갖고 오겠다 -->
+	</select>
+	
 	   
 
 	  <select id="selectList" resultMap="resultMapObj">
+	    select aa.* from (
 			  select 
 				    cgseq,
 					cgAnotherseq,
@@ -16,11 +31,10 @@
 					cgNum,
 					cgExplanation,
 					cgDelNy 
-			  from
-				  codegroup
-			  where 1=1
-			  and cgdelNy = 0
+		<include refid="selectCommon"/>
 			  order by cgseq desc
+			  ) aa
+	limit #{rowNumToShow} offset #{startRnumForMysql}
 	</select>
 	  
 	  <insert id="insert"> 
