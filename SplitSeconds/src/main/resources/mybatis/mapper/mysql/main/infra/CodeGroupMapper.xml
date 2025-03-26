@@ -10,7 +10,14 @@
 	<!--조건  / 이 테이블 컬럼을 설정 -->
 		where 1=1	<!-- 조건 -->
 			and cgdelNy = 0
-	</sql>
+	<!--  <if test="shUseFlag != null and !shUseFlag.equals('')">AND cgUseNy = #{shUseFlag}</if>
+     <if test="shDelFlag != null and !shDelFlag.equals('')">AND cgDelNy  = #{shDelFlag}</if>-->
+ <!--     <choose>
+            <when test="shOption == 1">AND cgseq = #{shValue}</when>
+            <when test="shOption == 2">AND cgName LIKE CONCAT('%',#{shValue},'%')</when>
+            <when test="shOption == 3">AND cgNameEng LIKE CONCAT('%',#{shValue},'%')</when>
+        </choose> -->
+	</sql> 
 	
 	<select id="selectOneCount" resultType="Integer">
 	           <!-- DAO함수 -->
@@ -28,11 +35,6 @@
 					cgName,
 					cgNameEng,
 					cgUseNy,
-					
-					<!-- (select count(aa.cdSeq) from Code aa where 1=1 
-					and aa.cdDelNy = 0 and aa.codeGroup_cgseq = a.cgSeq) 
-					as xifcdSeqCount, -->
-					
 					cgNum,
 					cgExplanation,
 					cgDelNy 
