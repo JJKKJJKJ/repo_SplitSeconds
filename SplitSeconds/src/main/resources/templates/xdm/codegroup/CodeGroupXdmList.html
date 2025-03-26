@@ -9,6 +9,16 @@
 								<form name="formList" id="formList" method="post" autocomplete="off">
 									<input type="hidden" name="thisPage" th:value="${vo.thisPage}" default="1"/>
 									<input type="hidden" id="rowNumToShow" name="rowNumToShow" th:value="${vo.rowNumToShow}"/>
+									
+										<!--<script>
+								  			let form = document.querySelector("form[name=formList]");
+								  				goList = function (thisPage) {
+								  				document.querySelector("input[name=thisPage]").value = thisPage;
+								  				form.action = "/code/codeXdmList";
+								  				form.submit();
+								  				}
+									  	</script>-->
+										
                                     <ol class="breadcrumb_jihye">
                                         <li class="#">
                                             <a href="javascript:void(0)">
@@ -126,6 +136,8 @@
                                                             <input type="checkbox" id="chk5">
                                                             <label class="toggle" for="chk5"></label>
                                                         </td>
+														<!-- <td th:text="${vo.totalRows - ((vo.thisPage - 1) * 
+															vo.rowNumToShow + listStat.index)}"></td> -->
                                                         <td th:text="${list.cgseq}"></td>
                                                         <td th:text="${list.cgUseNy}"></td>
                                                         <td th:text="${list.cgAnotherseq}"></td>
@@ -151,8 +163,7 @@
                                                 </li>
                                                 <li th:if="${vo.endPage ne vo.totalPages}" class="page-item" style="cursor: pointer;">
                                                     <a class="page-link" th:attr="onclick=|goList('${vo.endPage + 1}')|">
-                                                         <i class="fa-solid fa-angle-right"></i> 
-                                                         
+                                                         <i class="fa-solid fa-angle-right"></i>  
                                                     </a>
                                                 </li>
                                             </ul> 

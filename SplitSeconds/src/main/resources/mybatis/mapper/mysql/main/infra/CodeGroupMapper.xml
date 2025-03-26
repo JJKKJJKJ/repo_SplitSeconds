@@ -28,6 +28,11 @@
 					cgName,
 					cgNameEng,
 					cgUseNy,
+					
+					<!-- (select count(aa.cdSeq) from Code aa where 1=1 
+					and aa.cdDelNy = 0 and aa.codeGroup_cgseq = a.cgSeq) 
+					as xifcdSeqCount, -->
+					
 					cgNum,
 					cgExplanation,
 					cgDelNy 
