@@ -64,6 +64,33 @@
 			#{cgExplanation},
 			0 
 		)
+		<!-- <update id="update">
+		UPDATE codegroup
+		SET 
+			cgName = #{cogrName},
+			cgNameEng = #{cgNameEng},
+			cogrUseFlag = #{cogrUseFlag},
+			cgUseNy = #{cgUseNy},
+			cgNum = #{cgNum},
+			cgExplanation = #{cgExplanation},
+			cgDelNy = #{cgDelNy}
+		WHERE
+			cgAnotherseq = #{cgAnotherseq}
+	</update>
+	
+	<update id="uelete">
+		UPDATE codegroup
+		SET
+			cgDelNy = 1
+		WHERE
+			cgAnotherseq = #{cgAnotherseq}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM codegroup
+		WHERE
+			cgAnotherseq = #{cgAnotherseq}
+	</delete> -->
 		<selectKey resultType="String" keyProperty="cgseq" order="AFTER">
 				SELECT last_insert_id()
 		</selectKey>

@@ -27,5 +27,16 @@ public class CodeGroupService {
 	public int selectOneCount(){
 		return codeGroupDao.selectOneCount();
 	}
+//	public int update(CodeGroupDto codeGroupDto) {
+//		return codeGroupDao.update(codeGroupDto);
+//	}
+//	
+//	public int uelete(CodeGroupDto codeGroupDto) {
+//		return codeGroupDao.uelete(codeGroupDto);
+//	}
+//	
+//	public int delete(CodeGroupDto codeGroupDto) {
+//		return codeGroupDao.delete(codeGroupDto);
+//	}
 	
 }

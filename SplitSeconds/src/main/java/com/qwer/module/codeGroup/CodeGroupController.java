@@ -39,4 +39,22 @@ public class CodeGroupController {
 		System.out.println("codegroupDto.getSeq(): " + codegroupDto.getCgseq());
 		return "redirect:/xdm/codegroup/CodeGroupXdmList";
 	}
+	
+//	@RequestMapping(value = "/CodeGroupXdmUpdt")
+//	public String codeGroupXdmUpdt(CodeGroupDto codeGroupDto) {
+//		codeGroupService.update(codeGroupDto);
+//		return "redirect:/xdm/codegroup/CodeGroupXdmList";
+//	}
+//	
+//	@RequestMapping(value = "/CodeGroupXdmUelt")
+//	public String codeGroupXdmUelt(CodeGroupDto codeGroupDto) {
+//		codeGroupService.uelete(codeGroupDto);
+//		return "redirect:/xdm/codegroup/CodeGroupXdmList";
+//	}
+//	
+//	@RequestMapping(value = "/CodeGroupXdmDelt")
+//	public String codeGroupXdmDelt(CodeGroupDto codeGroupDto) {
+//		codeGroupService.delete(codeGroupDto);
+//		return "redirect:/xdm/codegroup/CodeGroupXdmList";
+//	}
 }
