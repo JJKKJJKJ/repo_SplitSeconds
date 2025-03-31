@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <div th:replace="~{xdm/include/head :: head}"></div>
+<div th:replace="~{xdm/include/top :: top}"></div>
+<div th:replace="~{xdm/include/left :: left}"></div>
+<body>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
@@ -10,14 +13,7 @@
 									<input type="hidden" name="thisPage" th:value="${vo.thisPage}" default="1"/>
 									<input type="hidden" id="rowNumToShow" name="rowNumToShow" th:value="${vo.rowNumToShow}"/>
 									
-										<!--<script>
-								  			let form = document.querySelector("form[name=formList]");
-								  				goList = function (thisPage) {
-								  				document.querySelector("input[name=thisPage]").value = thisPage;
-								  				form.action = "/code/codeXdmList";
-								  				form.submit();
-								  				}
-									  	</script>-->
+										
 										
                                     <ol class="breadcrumb_jihye">
                                         <li class="#">
@@ -154,7 +150,7 @@
                                         <div class="card-body" style="justify-content: center; display: flex;">
                                             <ul class="pagination"> 
                                                 <li th:if="${vo.startPage gt vo.pageNumToShow}" class="page-item" style="cursor: pointer;">
-                                                    <a class="page-link" href="javascript:goList(${vo.startPage - 1})" th:attr="onclick=|goList('${vo.startPage - 1}')|">
+                                                    <a class="page-link" href="javascript:void();" th:attr="onclick=|goList('${vo.startPage - 1}')|">
                                                         <i class="fa-solid fa-angle-left"></i>
                                                     </a>
                                                 </li>
@@ -208,4 +204,11 @@
     ***********************************-->
 
     <div th:replace="~{xdm/include/footer :: footer}"></div>
-        
+        <script>
+			let form = document.querySelector("form[name=formList]");
+			goList = function (thisPage) {
+			    document.querySelector("input[name=thisPage]").value = thisPage;
+			    form.action = "/xdm/codegroup/CodeGroupXdmList";
+			    form.submit();
+			}
+		</script>

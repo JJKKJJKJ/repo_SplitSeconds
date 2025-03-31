@@ -14,6 +14,7 @@ public class CodeGroupDto {
 	private String cgNum;
 	private String cgExplanation;
 	private Integer cgDelNy;
+
 	public String getCgseq() {
 		return cgseq;
 	}
