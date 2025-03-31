@@ -21,23 +21,25 @@
 	   
 
 	  <select id="selectList" resultMap="resultMapObj">
-	    select a.* from (
+	    select aa.* from (
 			  select 
 				    cdseq,
 					cdAnotherseq,
+					cdName,
 					cdNameEng,
 					cdUseNy,
 					cdNum,
 					cdExplanation,
 					cdDelNy 
+					 
 		<include refid="selectCommon"/>
 			  order by cdseq desc
-			  ) a
+			  ) aa
 	limit #{rowNumToShow} offset #{startRnumForMysql}
 	</select>
 	  
 	  <insert id="insert"> 
-		insert into codegroup (				 
+		insert into code (				 
 				
 				cdAnotherseq,
 				cdName,
@@ -45,7 +47,8 @@
 			    cdUseNy,
 			    cdNum,
 			    cdExplanation,
-			    cdDelNy
+			    cdDelNy,
+			    
 		 ) values (			 
 			
 			#{cdAnotherseq},
@@ -57,7 +60,7 @@
 			0 
 		)
 		
-		<selectKey resultType="String" keyProperty="cgseq" order="AFTER">
+		<selectKey resultType="String" keyProperty="cdseq" order="AFTER">
 				SELECT last_insert_id()
 		</selectKey>
 	</insert>
