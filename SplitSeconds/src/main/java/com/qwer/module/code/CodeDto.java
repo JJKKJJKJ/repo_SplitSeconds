@@ -13,8 +13,8 @@ public class CodeDto {
 	private String cdUseNy;
 	private String cdNum;
 	private String cdExplanation;
-	private Integer cdDelNy;
-	 private String codeGroupCgseq;
+	private Integer cdDelNy; 
+	private Integer codeGroup_cgseq; 
 	
 //	----
 	public String getCdseq() {
@@ -44,8 +44,8 @@ public class CodeDto {
 	public String getCdgUseNy() {
 		return cdUseNy;
 	}
-	public void setCdgUseNy(String cdgUseNy) {
-		this.cdUseNy = cdgUseNy;
+	public void setCdgUseNy(String cdUseNy) {
+		this.cdUseNy = cdUseNy;
 	}
 	public String getCdNum() {
 		return cdNum;
@@ -65,12 +65,13 @@ public class CodeDto {
 	public void setCdDelNy(Integer cdDelNy) {
 		this.cdDelNy = cdDelNy;
 	}
-	public String getCodeGroupCgseq() {
-		return codeGroupCgseq;
+	public Integer getCodeGroup_cgseq() {
+		return codeGroup_cgseq;
 	}
-	public void setCodeGroupCgseq(String codeGroupCgseq) {
-		this.codeGroupCgseq = codeGroupCgseq;
-	}
+	public void setCodeGroup_cgseq(Integer codeGroup_cgseq) {
+		this.codeGroup_cgseq = codeGroup_cgseq;
+	} 
+	
 	
 	
 //	----

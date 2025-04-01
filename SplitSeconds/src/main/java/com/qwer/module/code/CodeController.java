@@ -27,16 +27,12 @@ public class CodeController {
 	}
 	
 	@RequestMapping(value = "/xdm/code/CodeXdmForm")
-	public String codegroupXdmForm( ) {
-	
+	public String codegroupXdmForm( ) { 
 		return "xdm/code/CodeXdmForm";
 	}
 	@RequestMapping(value = "/code/CodeXdmInst")
 	public String codeXdmInst(CodeDto codeDto) {
-	
-	
 		codeService.insert(codeDto);
-		
 		return "redirect:/xdm/code/CodeXdmList";
 	}
 	

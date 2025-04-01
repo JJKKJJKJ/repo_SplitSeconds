@@ -9,7 +9,7 @@
 		from code 
 	<!--조건  / 이 테이블 컬럼을 설정 -->
 		where 1=1	<!-- 조건 -->
-			and cddelNy = 0
+			and cdDelNy = 0
 	</sql> 
 	
 	<select id="selectOneCount" resultType="Integer">
@@ -30,7 +30,8 @@
 					cdUseNy,
 					cdNum,
 					cdExplanation,
-					cdDelNy 
+					cdDelNy,
+					codeGroup_cgseq
 					 
 		<include refid="selectCommon"/>
 			  order by cdseq desc
@@ -39,25 +40,24 @@
 	</select>
 	  
 	  <insert id="insert"> 
-		insert into code (				 
-				
+		insert into code (	 
 				cdAnotherseq,
 				cdName,
 			    cdNameEng,		
 			    cdUseNy,
 			    cdNum,
 			    cdExplanation,
-			    cdDelNy,
-			    
-		 ) values (			 
-			
+			    cdDelNy ,
+			    codeGroup_cgseq
+		 ) values (			  
 			#{cdAnotherseq},
 			#{cdName},
 			#{cdNameEng},
 			#{cdUseNy},
 			#{cdNum},
 			#{cdExplanation},
-			0 
+			0, 
+			#{codeGroup_cgseq}
 		)
 		
 		<selectKey resultType="String" keyProperty="cdseq" order="AFTER">
