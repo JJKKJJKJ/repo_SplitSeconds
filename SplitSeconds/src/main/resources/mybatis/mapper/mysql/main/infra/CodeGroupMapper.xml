@@ -37,7 +37,9 @@
 					cgUseNy,
 					cgNum,
 					cgExplanation,
-					cgDelNy 
+					cgDelNy, 
+					cgDateUp,
+   					cgDateSet
 		<include refid="selectCommon"/>
 			  order by cgseq desc
 			  ) aa
@@ -53,7 +55,9 @@
 			    cgUseNy,
 			    cgNum,
 			    cgExplanation,
-			    cgDelNy
+			    cgDelNy,
+			    cgDateUp,
+   				cgDateSet
 		 ) values (			 
 			
 			#{cgAnotherseq},
@@ -62,7 +66,11 @@
 			#{cgUseNy},
 			#{cgNum},
 			#{cgExplanation},
-			0 
+			0,
+			now(),
+			now()
+
+			
 		)
 		<!-- <update id="update">
 		UPDATE codegroup

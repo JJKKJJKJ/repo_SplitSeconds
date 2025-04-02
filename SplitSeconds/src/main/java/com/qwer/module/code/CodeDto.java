@@ -1,5 +1,7 @@
 package com.qwer.module.code;
 
+import java.sql.Date;
+
 public class CodeDto {
 	
 //	int -> Integer
@@ -15,8 +17,12 @@ public class CodeDto {
 	private String cdExplanation;
 	private Integer cdDelNy; 
 	private Integer codeGroup_cgseq; 
+	private Date cdDateUp;
+	private Date cdDateSet;
+	
 	
 //	----
+	
 	public String getCdseq() {
 		return cdseq;
 	}
@@ -41,10 +47,10 @@ public class CodeDto {
 	public void setCdNameEng(String cdNameEng) {
 		this.cdNameEng = cdNameEng;
 	}
-	public String getCdgUseNy() {
+	public String getCdUseNy() {
 		return cdUseNy;
 	}
-	public void setCdgUseNy(String cdUseNy) {
+	public void setCdUseNy(String cdUseNy) {
 		this.cdUseNy = cdUseNy;
 	}
 	public String getCdNum() {
@@ -70,7 +76,21 @@ public class CodeDto {
 	}
 	public void setCodeGroup_cgseq(Integer codeGroup_cgseq) {
 		this.codeGroup_cgseq = codeGroup_cgseq;
-	} 
+	}
+	public Date getCdDateUp() {
+		return cdDateUp;
+	}
+	public void setCdDateUp(Date cdDateUp) {
+		this.cdDateUp = cdDateUp;
+	}
+	public Date getCdDateSet() {
+		return cdDateSet;
+	}
+	public void setCdDateSet(Date cdDateSet) {
+		this.cdDateSet = cdDateSet;
+	}
+
+	
 	
 	
 	

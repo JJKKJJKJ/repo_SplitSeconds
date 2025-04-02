@@ -9,7 +9,7 @@
 		from code 
 	<!--조건  / 이 테이블 컬럼을 설정 -->
 		where 1=1	<!-- 조건 -->
-			and cdDelNy = 0
+			and cddelNy = 0
 	</sql> 
 	
 	<select id="selectOneCount" resultType="Integer">
@@ -21,7 +21,7 @@
 	   
 
 	  <select id="selectList" resultMap="resultMapObj">
-	    select aa.* from (
+	    select bb.* from (
 			  select 
 				    cdseq,
 					cdAnotherseq,
@@ -31,13 +31,26 @@
 					cdNum,
 					cdExplanation,
 					cdDelNy,
+					cdDateUp,
+					cdDateSet,
 					codeGroup_cgseq
 					 
 		<include refid="selectCommon"/>
 			  order by cdseq desc
-			  ) aa
+			  ) bb
 	limit #{rowNumToShow} offset #{startRnumForMysql}
 	</select>
+	
+ 	<select id="selectListCode" resultMap="resultMapObj">
+			  select*from codegroup;
+					Select
+						cgseq, 
+					    cgName
+					    from
+					    codegroup
+					where 1=1
+					order by cgseq desc
+	</select> 
 	  
 	  <insert id="insert"> 
 		insert into code (	 
@@ -47,7 +60,9 @@
 			    cdUseNy,
 			    cdNum,
 			    cdExplanation,
-			    cdDelNy ,
+			    cdDelNy,
+			    cdDateUp,
+				cdDateSet,
 			    codeGroup_cgseq
 		 ) values (			  
 			#{cdAnotherseq},
@@ -57,6 +72,8 @@
 			#{cdNum},
 			#{cdExplanation},
 			0, 
+			#{cdDateUp},
+			#{cdDateSet},
 			#{codeGroup_cgseq}
 		)
 		

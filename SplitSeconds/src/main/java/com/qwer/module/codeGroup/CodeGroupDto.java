@@ -1,5 +1,7 @@
 package com.qwer.module.codeGroup;
 
+import java.sql.Date;
+
 public class CodeGroupDto {
 	
 //	int -> Integer
@@ -14,6 +16,8 @@ public class CodeGroupDto {
 	private String cgNum;
 	private String cgExplanation;
 	private Integer cgDelNy;
+	private Date cgDateUp;
+	private Date cgDateSet;
 
 	public String getCgseq() {
 		return cgseq;
@@ -62,6 +66,18 @@ public class CodeGroupDto {
 	}
 	public void setCgDelNy(Integer cgDelNy) {
 		this.cgDelNy = cgDelNy;
+	}
+	public Date getCgDateUp() {
+		return cgDateUp;
+	}
+	public void setCgDateUp(Date cgDateUp) {
+		this.cgDateUp = cgDateUp;
+	}
+	public Date getCgDateSet() {
+		return cgDateSet;
+	}
+	public void setCgDateSet(Date cgDateSet) {
+		this.cgDateSet = cgDateSet;
 	}
 	
 //	-----

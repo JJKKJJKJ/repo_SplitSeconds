@@ -118,10 +118,10 @@
                                                         <th>#</th>
                                                         <th>사용</th>
                                                         <th>코드그룹 코드</th>
-                                                        <th>코드그룹 이름</th>
+                                                        <th>성별</th>
                                                         <th>코드그룹 이름(영문)</th>
                                                         <th>갯수</th>
-                                                        <th>순서</th>
+                                                        <th>통신사</th>
                                                         <th>등록일</th>
                                                         <th>수정일</th>
                                                     </tr>
@@ -139,13 +139,13 @@
 															vo.rowNumToShow + listStat.index)}"></td> -->
                                                         <td th:text="${list.cdseq}"></td>
                                                         <td th:text="${list.cdUseNy}"></td>
-                                                        <td th:text="${list.cdAnotherseq}"></td><!--
-                                                        <td th:text="${list.cdName}"></td>-->
+                                                        <td th:text="${list.cdAnotherseq}"></td>
+                                                        <td th:text="${list.cdName}"></td>
                                                         <td th:text="${list.cdNameEng}"></td>
                                                         <td ></td>
                                                         <td th:text="${list.cdNum}"></td>
-                                                        <td></td>
-                                                        <td></td>
+														<td th:text="${list.cgDateUp}"></td>
+                                                        <td th:text="${list.cgDateSet}"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>

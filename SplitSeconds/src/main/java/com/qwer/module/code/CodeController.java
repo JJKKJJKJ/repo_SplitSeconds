@@ -32,6 +32,9 @@ public class CodeController {
 	}
 	@RequestMapping(value = "/code/CodeXdmInst")
 	public String codeXdmInst(CodeDto codeDto) {
+		
+		System.out.println("codeDto.getcdName(): " + codeDto.getCdName());
+		
 		codeService.insert(codeDto);
 		return "redirect:/xdm/code/CodeXdmList";
 	}
