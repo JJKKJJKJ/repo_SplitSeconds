@@ -10,6 +10,7 @@ public interface CodeGroupDao {
 
 	public int selectOneCount();
 	public List<CodeGroupDto> selectList(CodeGroupVo vo); 
+	public List<CodeGroupDto> selectListForCodeSelect(CodeGroupVo vo); 
 	public CodeGroupDto selectOne(CodeGroupDto codegroupDto); 
 	public int insert(CodeGroupDto codegroupDto); 
 

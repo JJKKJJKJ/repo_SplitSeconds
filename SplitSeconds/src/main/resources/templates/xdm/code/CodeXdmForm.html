@@ -18,7 +18,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title">기본 정보</h4>
                                     <div class="basic-form">
-                            <form action="/code/CodeXdmInst" method="post" id="form">
+                            <form method="post" id="form">
                                             <div class="form-row">
                                                 <div class="form-group col-md-3">
                                                     <div>
@@ -32,17 +32,17 @@
                                                     </div>
                                                     </div>
                                                     <div>
-                                                        <label for="cgUseNy">사용 여부<span style="color: red;">*</span></label>
-                                                        <select id="cgUseNy" class="form-control">
+                                                        <label for="cdUseNy">사용 여부<span style="color: red;">*</span></label>
+                                                        <select id="cdUseNy" class="form-control">
                                                             <option selected="selected"">사용</option>
                                                             <option">미사용</option>
                                                         </select>
                                                         <!-- <h4 class="card-title">Textarea</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group" style="margin-top: 15%;">
-                                                                <label for="cgExplanation" >설명</label>
+                                                                <label for="cdExplanation" >설명</label>
                                                                 <textarea class="form-control h-150px"
-                                                                    rows="6" name="cgExplanation" id="cgExplanation"></textarea>
+                                                                    rows="6" name="cdExplanation" id="cdExplanation"></textarea>
                                                             </div>
                                                         </div>
                                                     </div><!--요기-->
@@ -66,9 +66,9 @@
                                                         <div></div>
                                                         <div></div>
                                                         <div></div>
-                                                        <label for="cgAnotherseq">코드(ANOTHER)</label>
-														<select id="cgAnotherseq" class="form-control">
-                                                            <option selected="selected">"영대 소문자,숫자"</option>
+                                                        <label for="codeGroup_cgseq">코드그룹 코드(seq)</label>
+														<select id="codeGroup_cgseq" name="codeGroup_cgseq" class="form-control">
+															<option th:each="list : ${list}" th:text="${list.cgName}" th:value="${list.cgseq}"></option>
                                                         </select>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <!--<div class="basic-form">
@@ -79,11 +79,11 @@
                                                         </div>-->
 														<br>
 														<br>
-                                                        <label for="cgNum">순서<span style="color: red;">*</span></label>
+                                                        <label for="cdNum">순서<span style="color: red;">*</span></label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cgNum" id="cgNum"
+                                                                <input class="form-control" type="text" name="cdNum" id="cdNum"
                                                                     placeholder="">
                                                             </div>
                                                         </div>
@@ -93,11 +93,11 @@
                                                 <div class="form-group col-md-3">
                                                     <div class="">
 
-                                                        <label for="cgName">코드 이름<span style="color: red;">*</span></label>
+                                                        <label for="cdName">코드 이름<span style="color: red;">*</span></label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cgName" id="cgName"
+                                                                <input class="form-control" type="text" name="cdName" id="cdName"
                                                                     placeholder="한글,영대 소문자,숫자">
                                                             </div>
                                                         </div>
@@ -105,11 +105,11 @@
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <div class="">
-                                                        <label for="cgNameEng">코드 이름(영문)</label>
+                                                        <label for="cdNameEng">코드 이름(영문)</label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cgNameEng" id="cgNameEng"
+                                                                <input class="form-control" type="text" name="cdNameEng" id="cdNameEng"
                                                                     placeholder="한글,영대 소문자,숫자">
                                                             </div>
                                                         </div>
@@ -126,7 +126,7 @@
                                                         <br>
                                                         <br>
                                                         <br>
-
+s
                                                         <div class="form-group" style="margin-top: 20.5%;">
                                                             <button type="button" id="btnSave" class="btn btn"
                                                                     style="float: right;"><svg
@@ -165,10 +165,12 @@
         Content body end
     ***********************************-->
     <script type="text/javascript">
-
+		let form = document.getElementById("form");
         document.getElementById("btnSave").onclick = function(){
-            document.getElementById("form").submit();
+			form.action="/code/CodeXdmInst"
+            form.submit();
         }
+		docum
     </script>
 
     <div th:replace="~{xdm/include/footer :: footer}"></div>

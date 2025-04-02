@@ -17,6 +17,10 @@ public class CodeGroupService {
 		return  codeGroupDao.selectList(vo);
 	}
 	
+	public List<CodeGroupDto> selectListForCodeSelect(CodeGroupVo vo){
+		return  codeGroupDao.selectListForCodeSelect(vo);
+	}
+	
 	public CodeGroupDto selectOne(CodeGroupDto codegroupDto){
 		return codeGroupDao.selectOne(codegroupDto);
 	}

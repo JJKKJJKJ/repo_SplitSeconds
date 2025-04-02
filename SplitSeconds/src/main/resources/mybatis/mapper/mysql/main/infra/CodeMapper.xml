@@ -41,15 +41,20 @@
 	limit #{rowNumToShow} offset #{startRnumForMysql}
 	</select>
 	
- 	<select id="selectListCode" resultMap="resultMapObj">
-			  select*from codegroup;
-					Select
-						cgseq, 
-					    cgName
-					    from
-					    codegroup
-					where 1=1
-					order by cgseq desc
+ 	<select id="selectCode" resultMap="resultMapObj">
+					SELECT 
+			        cgseq,
+			        cgName,
+			        cgNameEng,
+			        cgUseNy,
+			        cgNum,
+			        cgExplanation,
+			        cgDelNy, 
+			        cgDateUp,
+			        cgDateSet
+			    FROM codegroup 
+			    WHERE cgDelNy = 0 
+			    ORDER BY cgseq DESC
 	</select> 
 	  
 	  <insert id="insert"> 

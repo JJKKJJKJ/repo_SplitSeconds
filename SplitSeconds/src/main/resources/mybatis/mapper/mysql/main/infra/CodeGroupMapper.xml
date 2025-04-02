@@ -28,22 +28,39 @@
 	   
 
 	  <select id="selectList" resultMap="resultMapObj">
-	    select aa.* from (
-			  select 
-				    cgseq,
-					cgAnotherseq,
-					cgName,
-					cgNameEng,
-					cgUseNy,
-					cgNum,
-					cgExplanation,
-					cgDelNy, 
-					cgDateUp,
-   					cgDateSet
-		<include refid="selectCommon"/>
-			  order by cgseq desc
-			  ) aa
+	    SELECT aa.* 
+FROM (
+    SELECT 
+        cgseq,
+        cgName,
+        cgNameEng,
+        cgUseNy,
+        cgNum,
+        cgExplanation,
+        cgDelNy, 
+        cgDateUp,
+        cgDateSet
+    FROM codegroup 
+    WHERE cgDelNy = 0 
+    ORDER BY cgseq DESC
+) aa
 	limit #{rowNumToShow} offset #{startRnumForMysql}
+	</select>
+	
+	  <select id="selectListForCodeSelect" resultMap="resultMapObj">
+    SELECT 
+        cgseq,
+        cgName,
+        cgNameEng,
+        cgUseNy,
+        cgNum,
+        cgExplanation,
+        cgDelNy, 
+        cgDateUp,
+        cgDateSet
+    FROM codegroup 
+    WHERE cgDelNy = 0 
+    ORDER BY cgseq DESC
 	</select>
 	  
 	  <insert id="insert"> 
