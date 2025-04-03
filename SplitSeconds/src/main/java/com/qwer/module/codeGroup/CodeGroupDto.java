@@ -18,6 +18,7 @@ public class CodeGroupDto {
 	private Integer cgDelNy;
 	private Date cgDateUp;
 	private Date cgDateSet;
+	private Integer xCount;
 
 	public String getCgseq() {
 		return cgseq;
@@ -79,6 +80,13 @@ public class CodeGroupDto {
 	public void setCgDateSet(Date cgDateSet) {
 		this.cgDateSet = cgDateSet;
 	}
+	public Integer getxCount() {
+		return xCount;
+	}
+	public void setxCount(Integer xCount) {
+		this.xCount = xCount;
+	}
+	
 	
 //	-----
 	
