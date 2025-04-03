@@ -23,7 +23,6 @@ public class CodeController {
 		vo.setParamsPaging(codeService.selectOneCount());
 	
 //		int a = codeGroupService.selectOneCount();
-		
 		model.addAttribute("list",codeService.selectList(vo));
 //		model.addAttribute("vo",vo);
 		
