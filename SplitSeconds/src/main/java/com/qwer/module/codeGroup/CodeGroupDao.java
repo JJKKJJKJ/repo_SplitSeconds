@@ -15,8 +15,8 @@ public interface CodeGroupDao {
 	public int insert(CodeGroupDto codegroupDto); 
 
 	
-//	public int update(CodeGroupDto codeGroupDto);
-//	public int uelete(CodeGroupDto codeGroupDto);
+	public int update(CodeGroupDto codeGroupDto);
+	public int uelete(CodeGroupDto codeGroupDto);
 	public int delete(CodeGroupDto codeGroupDto);
 	
 }

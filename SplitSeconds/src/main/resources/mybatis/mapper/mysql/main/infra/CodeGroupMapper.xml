@@ -37,6 +37,7 @@ FROM (
         cgUseNy,
         cgNum,
 		(select count(*) from code where 1=1 and codeGroup_cgseq = cgseq) as xCount,
+		                                                               <!--xCount:사용된 이름을 같게할수없다-->
         cgExplanation,
         cgDelNy, 
         cgDateUp,
