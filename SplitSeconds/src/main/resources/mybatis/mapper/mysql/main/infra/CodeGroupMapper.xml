@@ -91,18 +91,26 @@ FROM (
 
 			
 		)
-		<!-- <update id="update">
+		
+		<selectKey resultType="String" keyProperty="cgseq" order="AFTER">
+				SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
+	<update id="update">
 		UPDATE codegroup
 		SET 
-			cgName = #{cogrName},
-			cgNameEng = #{cgNameEng},
-			cogrUseFlag = #{cogrUseFlag},
-			cgUseNy = #{cgUseNy},
-			cgNum = #{cgNum},
-			cgExplanation = #{cgExplanation},
-			cgDelNy = #{cgDelNy}
+				cgAnotherseq = #{cgAnotherseq},
+				cgName=#{cgName},
+			    cgNameEng=#{cgNameEng},		
+			    cgUseNy=#{cgUseNy},
+			    cgNum=#{cgNum},
+			    cgExplanation=#{cgExplanation},
+			    cgDelNy=#{cgDelNy},
+			    cgDateUp=#{cgDateUp},
+   				cgDateSet=#{cgDateSet}
 		WHERE
-			cgAnotherseq = #{cgAnotherseq}
+			cgseq = #{cgseq}
 	</update>
 	
 	<update id="uelete">
@@ -110,16 +118,13 @@ FROM (
 		SET
 			cgDelNy = 1
 		WHERE
-			cgAnotherseq = #{cgAnotherseq}
+			cgseq = #{cgseq}
 	</update>
 	
 	<delete id="delete">
 		DELETE FROM codegroup
 		WHERE
-			cgAnotherseq = #{cgAnotherseq}
-	</delete> -->
-		<selectKey resultType="String" keyProperty="cgseq" order="AFTER">
-				SELECT last_insert_id()
-		</selectKey>
-	</insert>
+			cgseq = #{cgseq}
+	</delete> 
+	
 </mapper>
