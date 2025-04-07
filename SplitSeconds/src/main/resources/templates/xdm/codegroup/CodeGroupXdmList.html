@@ -120,22 +120,7 @@
                                                         <th>갯수</th>
                                                         <th>등록일</th>
                                                         <th>수정일</th>
-                                                    </tr><!-- 
-                                                    <th>
-                        <div class="form-check fs-9 mb-0 d-flex align-items-center">
-                          <input class="form-check-input" id="checkbox-bulk-customers-select" type="checkbox" data-bulk-select='{"body":"table-customers-body","actions":"table-customers-actions","replacedElement":"table-customers-replace-element"}' />
-                        </div>
-                      </th>
-                      <th class="text-900 sort white-nowrap" data-sort="#">#</th>
-                      <th class="text-900 sort white-nowrap" data-sort="use">사용</th>
-                      <th class="text-900 sort white-nowrap" data-sort="code-group-code">코드그룹 코드</th>
-                      <th class="text-900 sort white-nowrap" data-sort="code-group-name">코드그룹 이름</th>
-                      <th class="text-900 sort white-nowrap" data-sort="code-group-name-eng">코드그룹 이름(영문)</th>
-                      <th class="text-900 sort white-nowrap" data-sort="count">갯수</th>
-                      <th class="text-900 sort white-nowrap" data-sort="order">순서</th>
-                      <th class="text-900 sort white-nowrap" data-sort="resist-date">등록일</th>
-                      <th class="text-900 sort white-nowrap" data-sort="modify-date">수정일</th> -->
-                    </tr>
+                                                    </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr th:if="${#lists.isEmpty(list)}" th:each="list : ${list}">
@@ -149,7 +134,7 @@
 														<!-- <td th:text="${vo.totalRows - ((vo.thisPage - 1) * 
 															vo.rowNumToShow + listStat.index)}"></td> -->
                                                         <td th:text="${list.cgseq}"></td>
-                                                        <td th:text="${list.cgUseNy}"></td> 
+                                                        <td th:text="${list.cgUseNy}"></td>
                                                         <td th:text="${list.cgseq}"></td>
                                                         <td th:text="${list.cgName}"></td>
 <!--                                                         <td th:text="${list.cgNameEng}"></td> -->
@@ -224,8 +209,4 @@
 			    form.action = "/xdm/codegroup/CodeGroupXdmList";
 			    form.submit();
 			}
-			
-		/* 	document.getElementById("btnSave").onclick = function(){
-				document.getElementById("form").submit();
-			} */
 		</script>
