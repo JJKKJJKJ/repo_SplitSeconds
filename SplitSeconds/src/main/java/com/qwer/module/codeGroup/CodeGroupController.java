@@ -40,13 +40,13 @@ public class CodeGroupController {
 		return "redirect:/xdm/codegroup/CodeGroupXdmList";
 	}
 	
-//	/*
-//	 * @RequestMapping(value = "/xdm/codegroup/CodeGroupXdmList") public String
-//	 * emailXdmMfom(Model model , CodeGroupDto CodeGroupDto) {
-//	 * model.addAttribute("item",CodeGroupService.selectOne(CodeGroupDto)); return
-//	 * "/xdm/codegroup/CodeGroupXdmList"; 
-//	 * }
-//	 */
+	
+	@RequestMapping(value ="/xdm/codegroup/codegroupXdmMfom") 
+	public String codegroupXdmMfom(Model model , CodeGroupDto CodeGroupDto) {
+		model.addAttribute("item",codeGroupService.selectOne(CodeGroupDto)); 
+		return "/xdm/codegroup/codegroupXdmMfom"; 
+	 }
+	 
 	
 	@RequestMapping(value = "/CodeGroupXdmUpdt")
 	public String codeGroupXdmUpdt(CodeGroupDto codeGroupDto) {
