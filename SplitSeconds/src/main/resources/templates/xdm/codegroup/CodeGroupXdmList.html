@@ -133,13 +133,13 @@
                                                         </td>
 															 <td th:text="${vo.totalRows - ((vo.thisPage - 1) * 
 															vo.rowNumToShow + listStat.index)}"></td> 
-                                                        <td th:text="${list.cgseq}"></td>
-                                                        <td th:text="${list.cgUseNy}"></td>
+                                                        <td><a th:href="@{/xdm/codegroup/CodeGroupXdmMForm?(cgseq=${list.cgseq})}" th:text="${list.cgseq}"></a></td>
+                                                        <td><a th:href="@{/xdm/codegroup/CodeGroupXdmMForm?(cgseq=${list.cgseq})}" th:text="${list.cgUseNy}"></a></td>
                                                         <!-- <td th:text="${list.cgseq}"></td> -->
                                                         <td><a th:href="@{/xdm/codegroup/CodeGroupXdmMForm?(cgseq=${list.cgseq})}" th:text="${list.cgName}"></a></td>
-                                                        <td th:text="${list.xCount}"></td>
-                                                        <td th:text="${list.cgDateUp}"></td>
-                                                        <td th:text="${list.cgDateSet}"></td>
+                                                        <td><a th:href="@{/xdm/codegroup/CodeGroupXdmMForm?(cgseq=${list.cgseq})}" th:text="${list.xCount}"></a></td>
+                                                        <td><a th:href="@{/xdm/codegroup/CodeGroupXdmMForm?(cgseq=${list.cgseq})}" th:text="${list.cgDateUp}"></a></td>
+                                                        <td><a th:href="@{/xdm/codegroup/CodeGroupXdmMForm?(cgseq=${list.cgseq})}" th:text="${list.cgDateSet}"></a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>

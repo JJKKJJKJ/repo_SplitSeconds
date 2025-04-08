@@ -48,19 +48,19 @@ public class CodeGroupController {
 	 }
 	 
 	
-	@RequestMapping(value = "/CodeGroupXdmUpdt")
+	@RequestMapping(value = "/xdm/CodeGroupXdmUpdt")
 	public String codeGroupXdmUpdt(CodeGroupDto codeGroupDto) {
 		codeGroupService.update(codeGroupDto);
 		return "redirect:/xdm/codegroup/CodeGroupXdmList";
 	}
 	
-	@RequestMapping(value = "/CodeGroupXdmUelt")
+	@RequestMapping(value = "/xdm/CodeGroupXdmUelt")
 	public String codeGroupXdmUelt(CodeGroupDto codeGroupDto) {
 		codeGroupService.uelete(codeGroupDto);
 		return "redirect:/xdm/codegroup/CodeGroupXdmList";
 	}
 	
-	@RequestMapping(value = "/CodeGroupXdmDelt")
+	@RequestMapping(value = "/xdm/CodeGroupXdmDelt")
 	public String codeGroupXdmDelt(CodeGroupDto codeGroupDto) {
 		codeGroupService.delete(codeGroupDto);
 		return "redirect:/xdm/codegroup/CodeGroupXdmList";
