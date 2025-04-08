@@ -126,7 +126,6 @@ FROM (
 			    cgUseNy=#{cgUseNy},
 			    cgNum=#{cgNum},
 			    cgExplanation=#{cgExplanation},
-			    cgDelNy=#{cgDelNy},
 			    cgDateUp=#{cgDateUp},
    				cgDateSet=#{cgDateSet}
 		WHERE

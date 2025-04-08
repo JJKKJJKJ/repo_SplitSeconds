@@ -48,7 +48,7 @@ public class CodeGroupController {
 	 }
 	 
 	
-	@RequestMapping(value = "/xdm/CodeGroupXdmUpdt")
+	@RequestMapping(value = "/xdm/codegroup/CodeGroupXdmUpdt")
 	public String codeGroupXdmUpdt(CodeGroupDto codeGroupDto) {
 		codeGroupService.update(codeGroupDto);
 		return "redirect:/xdm/codegroup/CodeGroupXdmList";
