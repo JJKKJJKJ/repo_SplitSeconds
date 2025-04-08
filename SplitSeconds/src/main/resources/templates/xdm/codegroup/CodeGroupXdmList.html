@@ -116,7 +116,7 @@
                                                         <th>사용</th>
                                                         <th>코드그룹 코드</th>
                                                         <th>코드그룹 이름</th>
-<!--                                                         <th>코드그룹 이름(영문)</th> -->
+                                                         <th>코드그룹 이름(영문)</th> 
                                                         <th>갯수</th>
                                                         <th>등록일</th>
                                                         <th>수정일</th>
@@ -131,12 +131,12 @@
                                                             <input type="checkbox" id="chk5">
                                                             <label class="toggle" for="chk5"></label>
                                                         </td>
-														<!-- <td th:text="${vo.totalRows - ((vo.thisPage - 1) * 
-															vo.rowNumToShow + listStat.index)}"></td> -->
+															 <td th:text="${vo.totalRows - ((vo.thisPage - 1) * 
+															vo.rowNumToShow + listStat.index)}"></td> 
                                                         <td th:text="${list.cgseq}"></td>
                                                         <td th:text="${list.cgUseNy}"></td>
                                                         <td th:text="${list.cgseq}"></td>
-                                                        <td><a th:href="@{/xdm/codegroup/CodeGroupXdmMForm}" th:text="${list.cgName}"></a></td>
+                                                        <td><a th:href="@{/xdm/codegroup/CodeGroupXdmMForm?(cgseq=${list.cgseq})}" th:text="${list.cgName}"></a></td>
                                                         <td th:text="${list.xCount}"></td>
                                                         <td th:text="${list.cgDateUp}"></td>
                                                         <td th:text="${list.cgDateSet}"></td>

@@ -41,10 +41,10 @@ public class CodeGroupController {
 	}
 	
 	
-	@RequestMapping(value ="/xdm/codegroup/codegroupXdmMfom") 
+	@RequestMapping(value ="/xdm/codegroup/CodeGroupXdmMForm") 
 	public String codegroupXdmMfom(Model model , CodeGroupDto CodeGroupDto) {
 		model.addAttribute("item",codeGroupService.selectOne(CodeGroupDto)); 
-		return "/xdm/codegroup/codegroupXdmMfom"; 
+		return "/xdm/codegroup/CodeGroupXdmMForm"; 
 	 }
 	 
 	
@@ -65,4 +65,10 @@ public class CodeGroupController {
 		codeGroupService.delete(codeGroupDto);
 		return "redirect:/xdm/codegroup/CodeGroupXdmList";
 	}
+	/*
+	 * @RequestMapping(value = "/xdm/codegroup/CodeGroupXdmMForm") public String
+	 * codegroupXdmMForm( ) {
+	 * 
+	 * return "xdm/codegroup/CodeGroupXdmMForm"; }
+	 */
 }
