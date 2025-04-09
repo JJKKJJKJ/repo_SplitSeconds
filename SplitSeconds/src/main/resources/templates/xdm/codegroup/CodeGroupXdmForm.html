@@ -26,7 +26,7 @@
                                                     <div class="basic-form">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text"  name="cgseq" id="cgseq"
-                                                                placeholder="자동 생성" readonly="readonly" th:value="${item.cgseq}">
+                                                                placeholder="자동 생성" readonly="readonly">
                                                         </div>
                                                         <br>
                                                     </div>
@@ -34,9 +34,8 @@
                                                     <div>
                                                         <label for="cgUseNy">사용 여부<span style="color: red;">*</span></label>
                                                         <select id="cgUseNy" class="form-control">
-                                                            <option selected="selected" th:value="${item.cgUseNy}">사용</option>
-                                                            <option selected="selected" th:value="${item.cgUseNy}">미사용</option>
-                                                         <!--    <option">미사용</option> -->
+                                                            <option selected="selected"">사용</option>
+                                                            <option">미사용</option>
                                                         </select>
                                                         <!-- <h4 class="card-title">Textarea</h4> -->
                                                         <div class="basic-form">
@@ -72,7 +71,7 @@
                                                         <div class="basic-form">
                                                             <div class="form-group" >
                                                                 <input class="form-control" type="text" name="cgAnotherseq" id="cgAnotherseq"
-                                                                    placeholder="영대 소문자,숫자" th:value="${item.cgAnotherseq}">
+                                                                    placeholder="영대 소문자,숫자">
                                                             </div>
                                                         </div><br>
                                                         <label for="cgNum">순서<span style="color: red;">*</span></label>
@@ -80,7 +79,7 @@
                                                         <div class="basic-form">
                                                             <div class="form-group">
                                                                 <input class="form-control" type="text" name="cgNum" id="cgNum"
-                                                                    placeholder="" th:value="${item.cgNum}">
+                                                                    placeholder="">
                                                             </div>
                                                         </div>
                                                         <!-- </div>                   -->
@@ -94,7 +93,7 @@
                                                         <div class="basic-form">
                                                             <div class="form-group">
                                                                 <input class="form-control" type="text" name="cgName" id="cgName"
-                                                                    placeholder="한글,영대 소문자,숫자" th:value="${item.cgName}">
+                                                                    placeholder="한글,영대 소문자,숫자">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -106,7 +105,7 @@
                                                         <div class="basic-form">
                                                             <div class="form-group">
                                                                 <input class="form-control" type="text" name="cgNameEng" id="cgNameEng"
-                                                                    placeholder="한글,영대 소문자,숫자" th:value="${item.cgNameEng}">
+                                                                    placeholder="한글,영대 소문자,숫자">
                                                             </div>
                                                         </div>
                                                         <br>
