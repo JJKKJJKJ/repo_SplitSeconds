@@ -42,11 +42,11 @@
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-control">
-                                                    <option>검색구분</option>
-                                                    <option>코드그룹 코드</option>
-                                                    <option>코드그룹 이름</option>
-                                                    <option>코드 이름(영문)</option>
+                                                <select id="shOption" name="shOption" class="form-control">
+                                                    <option value="" th:selected="${vo.shOption == null}">검색구분</option>
+													<option value="1" th:selected="${vo.shOption == 1}">코드그룹 코드</option>
+													<option value="2" th:selected="${vo.shOption == 2}">코드그룹 이름</option>
+													<option value="3" th:selected="${vo.shOption == 3}">코드그룹 이름 (영문)</option>
                                                 </select>
                                             </div>
                                         </div>

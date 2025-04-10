@@ -10,11 +10,11 @@
         WHERE 1=1
         <if test="shDelNy != null and !shDelNy.equals('')">AND a.cgUseNy = #{shDelNy}</if>
 <!--         <if test="cgDateUp != null and !cgDateUp.equals('')">AND a.cgDateUp = #{cgDateUp}</if> -->
-<!--         <choose> -->
-<!--             <when test="shOption == 1">AND cgSeq = #{shValue}</when> -->
-<!--             <when test="shOption == 2">AND cgName LIKE CONCAT('%',#{shValue},'%')</when> -->
-<!--             <when test="shOption == 3">AND cgNameEng LIKE CONCAT('%',#{shValue},'%')</when> -->
-<!--         </choose> -->
+        <choose>
+            <when test="shOption == 1">AND cgseq = #{shValue}</when>
+            <when test="shOption == 2">AND cgName LIKE CONCAT('%',#{shValue},'%')</when>
+            <when test="shOption == 3">AND a.cgNameEng LIKE CONCAT('%',#{shValue},'%')</when>
+        </choose>
     </sql>
 	 
 	<select id="selectOneCount" resultType="Integer">
