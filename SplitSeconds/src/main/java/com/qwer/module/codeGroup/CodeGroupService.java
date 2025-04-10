@@ -28,8 +28,8 @@ public class CodeGroupService {
 		return codeGroupDao.insert(codegroupDto);
 	}
 	
-	public int selectOneCount(){
-		return codeGroupDao.selectOneCount();
+	public int selectOneCount(CodeGroupVo vo){
+		return codeGroupDao.selectOneCount(vo);
 	}
 	
 	public int update(CodeGroupDto codeGroupDto) {

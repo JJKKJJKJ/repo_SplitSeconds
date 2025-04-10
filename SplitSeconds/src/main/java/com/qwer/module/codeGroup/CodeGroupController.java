@@ -14,10 +14,13 @@ public class CodeGroupController {
 	@RequestMapping(value = "/xdm/codegroup/CodeGroupXdmList")
 	public String codegroupXdmList(@ModelAttribute("vo") CodeGroupVo vo , Model model) {
 		
-		vo.setParamsPaging(codeGroupService.selectOneCount());
-	
-//		int a = codeGroupService.selectOneCount();
+//		setSearch(vo);
+		vo.setParamsPaging(codeGroupService.selectOneCount(vo));
 		
+		if (vo.getTotalRows() > 0) {
+			model.addAttribute("list", codeGroupService.selectList(vo));
+		}
+
 		model.addAttribute("list",codeGroupService.selectList(vo));
 //		model.addAttribute("vo",vo);
 		
@@ -25,7 +28,7 @@ public class CodeGroupController {
 	}
 	
 	@RequestMapping(value = "/xdm/codegroup/CodeGroupXdmForm")
-	public String codegroupXdmForm( ) {
+	public String codegroupXdmForm() {
 	
 		return "xdm/codegroup/CodeGroupXdmForm";
 	}

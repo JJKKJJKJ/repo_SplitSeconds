@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface CodeGroupDao {
 
 
-	public int selectOneCount();
+	public int selectOneCount(CodeGroupVo vo);
 	public List<CodeGroupDto> selectList(CodeGroupVo vo); 
 	public List<CodeGroupDto> selectListForCodeSelect(CodeGroupVo vo); 
 	public CodeGroupDto selectOne(CodeGroupDto codegroupDto); 
