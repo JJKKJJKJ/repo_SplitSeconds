@@ -11,11 +11,11 @@
 <!--             <if test="shUseNy != null and !shUseNy.equals('')">AND cgUseNy = #{shUseNy}</if> -->
         <if test="shDelNy != null and !shDelNy.equals('')">AND cgDelNy = #{shDelNy}</if> 
 	 				
-				<choose>
+			<!-- 	<choose>
 					<when test="shOptionDate == 1">AND a.regDateTime BETWEEN #{shDateStart} AND #{shDateEnd}</when>
 					<when test="shOptionDate == 2">AND a.modDateTime BETWEEN #{shDateStart} AND #{shDateEnd}</when>
-				</choose>
- -->				
+				</choose> -->
+ 				
         <if test="shDelNy != null and !shDelNy.equals('')">AND cgDelNy = #{shDelNy}</if>
 <!--         <if test="cgDateUp != null and !cgDateUp.equals('')">AND a.cgDateUp = #{cgDateUp}</if> -->
         <choose>
