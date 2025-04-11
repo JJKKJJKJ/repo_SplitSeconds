@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+                 
+<mapper namespace="com.qwer.module.member.MemberDao">
+
+	<resultMap id="resultMapObj" type="com.qwer.module.member.MemberDto"></resultMap>
+	
+	<sql id="selectCommon"> 
+		from member 
+	<!--조건  / 이 테이블 컬럼을 설정 -->
+		where 1=1	<!-- 조건 -->
+			
+	</sql> 
+	
+	<select id="selectOneCount" resultType="Integer">
+	           <!-- DAO함수 -->
+		SELECT COUNT(*) <!-- 데이터가 총 몇개가 있는지  -->
+		<include refid="selectCommon"/> <!-- include refid=이름은 해당되는 id를 이 위치에 갖고 오겠다 -->
+	</select>
+	
+	   
+
+	  <select id="selectList" resultMap="resultMapObj">
+	    select cc.* from (
+			  select 
+				  memberseq,
+			      firstName,
+			      lastName,
+			      memberGenderCd,
+			      brith,
+			      Id,
+			      password,
+			      email,
+			      check,
+			      collectCd,
+			      phoneNumber 
+					 
+		<include refid="selectCommon"/>
+			  order by memberseq desc
+			  ) cc
+	limit #{rowNumToShow} offset #{startRnumForMysql}
+	</select>
+	
+ 	<select id="selectMember" resultMap="resultMapObj">
+				  memberseq,
+			      firstName,
+			      lastName,
+			      memberGenderCd,
+			      brith,
+			      Id,
+			      password,
+			      email,
+			      check,
+			      collectCd,
+			      phoneNumber
+			    FROM codegroup 
+			    WHERE cgDelNy = 0 
+			    ORDER BY cgseq DESC
+	</select> 
+	  
+	  <insert id="insert"> 
+		insert into member (	 
+				  memberseq,
+			      firstName,
+			      lastName,
+			      memberGenderCd,
+			      brith,
+			      Id,
+			      password,
+			      email,
+			      check,
+			      collectCd,
+			      phoneNumber
+		 ) values (			  
+			#{memberseq},
+			#{firstName},
+			#{lastName},
+			#{memberGenderCd},
+			#{Id},
+			#{password},
+			#{email},
+			#{check},
+			#{collectCd},
+			#{phoneNumber}
+		)
+		
+		<selectKey resultType="String" keyProperty="cdseq" order="AFTER">
+				SELECT last_insert_id()
+		</selectKey>
+	</insert>
+</mapper>
