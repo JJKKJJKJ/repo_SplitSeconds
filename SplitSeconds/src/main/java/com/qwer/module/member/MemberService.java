@@ -1,6 +1,5 @@
 package com.qwer.module.member ;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,16 +16,15 @@ public class MemberService {
 		return  memberDao.selectList(vo);
 	}
 	
-	public MemberDto selectMember(MemberDto codeDto){
-		return memberDao.selectMember(codeDto);
+	public MemberDto selectMember(MemberDto memberDto){
+		return memberDao.selectMember(memberDto);
 	}
-	public int insert(MemberDto codeDto){
-		return memberDao.insert(codeDto);
+	public int insert(MemberDto memberDto){
+		return memberDao.insert(memberDto);
 	}
 	
 	public int selectOneCount(){
 		return memberDao.selectOneCount();
 	}
  
-	
 }
