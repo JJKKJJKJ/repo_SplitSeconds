@@ -12,8 +12,8 @@ public class MemberDto {
 	private String memberseq;
 	private String firstName;
 	private String lastName;
-	private Date memberGenderCd;
-	private Integer brith;
+	private Integer memberGenderCd;
+	private Date brith;
 	private String Id;
     private String password;
     private String email;
@@ -39,16 +39,16 @@ public class MemberDto {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public Date getMemberGenderCd() {
+	public Integer getMemberGenderCd() {
 		return memberGenderCd;
 	}
-	public void setMemberGenderCd(Date memberGenderCd) {
+	public void setMemberGenderCd(Integer memberGenderCd) {
 		this.memberGenderCd = memberGenderCd;
 	}
-	public Integer getBrith() {
+	public Date getBrith() {
 		return brith;
 	}
-	public void setBrith(Integer brith) {
+	public void setBrith(Date brith) {
 		this.brith = brith;
 	}
 	public String getId() {
@@ -88,8 +88,7 @@ public class MemberDto {
 		this.phoneNumber = phoneNumber;
 	}
 	
-    
-    
+	
 }
 
 	

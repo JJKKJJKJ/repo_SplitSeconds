@@ -23,11 +23,11 @@ public class MemberController {
 		return "/xdm/member/MemberXdmList";
 	}
 	
-//	@RequestMapping(value = "/xdm/member/MemberXdmForm")
-//	public String MemberXdmForm(MemberVo memberVo , Model model) { 
-//		model.addAttribute("list",memberService.selectListForMemberSelect(MemberVo));
-//		return "/xdm/member/MemberXdmForm";
-//	}
+	@RequestMapping(value = "/xdm/member/MemberXdmForm")
+	public String MemberXdmForm(MemberVo memberVo , Model model) { 
+//		model.addAttribute(memberService.selectListForMemberSelect(MemberVo));
+		return "/xdm/member/MemberXdmForm";
+	}
 	@RequestMapping(value = "/member/MemberInst")
 	public String memberInst(MemberDto memberDto) {
 		
