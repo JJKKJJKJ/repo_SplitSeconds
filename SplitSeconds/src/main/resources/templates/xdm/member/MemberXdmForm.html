@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="~{xdm/include/head :: head}"></div>
+<div th:replace="~{xdm/include/top :: top}"></div> 
+<div th:replace="~{xdm/include/left :: left}"></div> 
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                <div class="card-body">
+                    <h1 class="#">code</h1>
+
+                    <div class="table-responsive">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">기본 정보</h4>
+                                    <div class="basic-form">
+                            <form method="post" id="form">
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <div>
+                                                    <label for="cgseq">코드그룹 코드<span style="color: red;">*</span></label>
+                                                    <div class="basic-form">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text"  name="cgseq" id="cgseq"
+                                                                placeholder="자동 생성" readonly="readonly">
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                    </div>
+                                                    <div>
+                                                        <label for="cdUseNy">사용 여부<span style="color: red;">*</span></label>
+                                                        <select id="cdUseNy" class="form-control">
+                                                            <option selected="selected"">사용</option>
+                                                            <option">미사용</option>
+                                                        </select>
+                                                        <!-- <h4 class="card-title">Textarea</h4> -->
+                                                        <div class="basic-form">
+                                                            <div class="form-group" style="margin-top: 15%;">
+                                                                <label for="cdExplanation" >설명</label>
+                                                                <textarea class="form-control h-150px"
+                                                                    rows="6" name="cdExplanation" id="cdExplanation"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div><!--요기-->
+													<div><a href="/xdm/code/CodeXdmList"><button type="button" class="btn btn"><svg
+	                                                        xmlns="http://www.w3.org/2000/svg"
+	                                                        width="16" height="16" fill="currentColor"
+	                                                        class="bi bi-list-task" viewBox="0 0 16 16">
+	                                                        <path fill-rule="evenodd"
+	                                                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z" />
+	                                                        <path
+	                                                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z" />
+	                                                        <path fill-rule="evenodd"
+	                                                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z" />
+	                                                    </svg></button></a></div>
+                                                </div>
+
+
+                                                <div class="form-group col-md-3">
+                                                    <div class="">
+                                                        <!-- <div class=""> -->
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <label for="codeGroup_cgseq">코드그룹 코드(seq)</label>
+														<select id="codeGroup_cgseq" name="codeGroup_cgseq" class="form-control">
+															<option th:each="list : ${list}" th:text="${list.cgName}" th:value="${list.cgseq}"></option>
+                                                        </select>
+                                                        <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
+                                                        <!--<div class="basic-form">
+                                                            <div class="form-group" >
+                                                                <input class="form-control" type="text" name="cgAnotherseq" id="cgAnotherseq"
+                                                                    placeholder="영대 소문자,숫자">
+                                                            </div>
+                                                        </div>-->
+														<br>
+														<br>
+                                                        <label for="cdNum">순서<span style="color: red;">*</span></label>
+                                                        <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
+                                                        <div class="basic-form">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" name="cdNum" id="cdNum"
+                                                                    placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <!-- </div>                   -->
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <div class="">
+
+                                                        <label for="cdName">코드 이름<span style="color: red;">*</span></label>
+                                                        <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
+                                                        <div class="basic-form">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" name="cdName" id="cdName"
+                                                                    placeholder="한글,영대 소문자,숫자">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <div class="">
+                                                        <label for="cdNameEng">코드 이름(영문)</label>
+                                                        <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
+                                                        <div class="basic-form">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" name="cdNameEng" id="cdNameEng"
+                                                                    placeholder="한글,영대 소문자,숫자">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+s
+                                                        <div class="form-group" style="margin-top: 20.5%;">
+                                                            <button type="button" id="btnSave" class="btn btn"
+                                                                    style="float: right;"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="16" height="16" fill="blue"
+                                                                    class="bi bi-database-fill"
+                                                                    viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223" />
+                                                                    <path
+                                                                        d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972" />
+                                                                    <path
+                                                                        d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972" />
+                                                                    <path
+                                                                        d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                      
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #/ container -->
+            </div>
+    </div>
+</div>
+</div>
+    <!--**********************************
+        Content body end
+    ***********************************-->
+    <script type="text/javascript">
+		let form = document.getElementById("form");
+        document.getElementById("btnSave").onclick = function(){
+			form.action="/member/MemberInst"
+            form.submit();
+        }
+		docum
+    </script>
+
+    <div th:replace="~{xdm/include/footer :: footer}"></div>

@@ -28,7 +28,7 @@ public class MemberController {
 //		model.addAttribute("list",memberService.selectListForMemberSelect(MemberVo));
 //		return "/xdm/member/MemberXdmForm";
 //	}
-	@RequestMapping(value = "/member/MemberXdmInst")
+	@RequestMapping(value = "/member/MemberInst")
 	public String memberInst(MemberDto memberDto) {
 		
 		memberService.insert(memberDto);

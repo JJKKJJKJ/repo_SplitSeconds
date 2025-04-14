@@ -17,7 +17,7 @@ public class MemberDto {
 	private String Id;
     private String password;
     private String email;
-    private Integer check;
+    private Boolean check;
     private String collectCd;
     private String phoneNumber; 
 //	-----
@@ -69,10 +69,10 @@ public class MemberDto {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Integer getCheck() {
+	public Boolean getCheck() {
 		return check;
 	}
-	public void setCheck(Integer check) {
+	public void setCheck(Boolean check) {
 		this.check = check;
 	}
 	public String getCollectCd() {
@@ -87,7 +87,7 @@ public class MemberDto {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-   
+	
     
     
 }

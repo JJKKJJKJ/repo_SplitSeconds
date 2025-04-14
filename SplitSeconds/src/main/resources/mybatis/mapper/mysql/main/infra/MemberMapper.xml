@@ -31,7 +31,7 @@
 			      Id,
 			      password,
 			      email,
-			      check,
+			      `check`,
 			      collectCd,
 			      phoneNumber 
 					 
@@ -50,7 +50,7 @@
 			      Id,
 			      password,
 			      email,
-			      check,
+			      `check`,
 			      collectCd,
 			      phoneNumber
 			    FROM codegroup 
@@ -68,7 +68,7 @@
 			      Id,
 			      password,
 			      email,
-			      check,
+			      `check`,
 			      collectCd,
 			      phoneNumber
 		 ) values (			  
@@ -76,6 +76,7 @@
 			#{firstName},
 			#{lastName},
 			#{memberGenderCd},
+			#{brith},
 			#{Id},
 			#{password},
 			#{email},
