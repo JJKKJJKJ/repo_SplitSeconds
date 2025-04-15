@@ -116,14 +116,16 @@
                                                             <label class="toggle" for="chk5"></label>
                                                         </th>
                                                         <th>#</th>
-                                                        <th>사용</th>
-                                                        <th>코드그룹 코드</th>
-                                                        <th>코드그룹 이름</th>
-                                                        <th>코드그룹 이름(영문)</th>
-                                                        <th>갯수</th>
-                                                        <th>순서</th>
-                                                        <th>등록일</th>
-                                                        <th>수정일</th>
+                                                        <th>성</th>
+                                                        <th>이름</th>
+                                                        <th>성별</th>
+                                                        <th>생일</th>
+                                                        <th>Id</th>
+                                                        <th>password</th>
+                                                        <th>email</th>
+                                                       <!--  <th>`check`</th> -->
+                                                        <th>collectCd</th>
+                                                        <th>phoneNumber</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -137,14 +139,17 @@
                                                         </td>
 														<!-- <td th:text="${vo.totalRows - ((vo.thisPage - 1) * 
 															vo.rowNumToShow + listStat.index)}"></td> -->
-                                                        <td th:text="${list.cdseq}"></td>
-                                                        <td th:text="${list.cdUseNy}"></td>
-                                                        <td th:text="${list.cdAnotherseq}"></td>
-                                                        <td th:text="${list.cdName}"></td>
-                                                        <td th:text="${list.cdNameEng}"></td>
-                                                        <td th:text="${list.cdNum}"></td>
-														<td th:text="${list.cdDateUp}"></td>
-                                                        <td th:text="${list.cdDateSet}"></td>
+                                                        <td th:text="${list.memberseq}"></td>
+                                                        <td th:text="${list.firstName}"></td>
+                                                        <td th:text="${list.lastName}"></td>
+                                                        <td th:text="${list.memberGenderCd}"></td>
+                                                        <td th:text="${list.brith}"></td>
+                                                        <td th:text="${list.Id}"></td>
+                                                        <td th:text="${list.password}"></td>
+                                                        <td th:text="${list.email}"></td>
+                                                        <!-- <td th:text="${list.`check`}"></td> -->
+														<td th:text="${list.collectCd}"></td>
+                                                        <td th:text="${list.phoneNumber}"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
