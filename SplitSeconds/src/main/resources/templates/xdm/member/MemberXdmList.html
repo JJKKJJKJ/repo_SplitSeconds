@@ -36,28 +36,30 @@
                                     <div class="row" style="margin-top: 3%;">
                                         <div class="col">
                                             <div class="form-group">
-                                                <select class="form-control">
-                                                    <option>N</option>
-                                                    <option>Y</option>
+                                                 <select id="shDelNy" name="shDelNy" class="form-control">
+                                                    <option value="" th:selected="${vo.shDelNy == null}">삭제여부</option>
+													<option value="1" th:selected="${vo.shDelNy == 1}">Y</option>
+													<option value="0" th:selected="${vo.shDelNy == 0}">N</option>      
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <select class="form-control">
-												   <option>검색구분</option>
-	                                               <option>코드그룹 코드</option>
-	                                               <option>코드그룹 이름</option>
-	                                               <option>코드</option>
-	                                               <option>대체 코드</option>
-	                                               <option>코드 이름</option>
-	                                               <option>코드 이름(영문)</option>
+                                                <select id="shOption" name="shOption" class="form-control">
+												   <option value="" th:selected="${vo.shOption == null}">검색구분</option>
+	                                               <option value="1" th:selected="${vo.shOption == 1}">코드그룹 코드</option>
+	                                               <option value="2" th:selected="${vo.shOption == 2}">코드그룹 이름</option>
+	                                               <option value="3" th:selected="${vo.shOption == 3}">코드</option>
+	                                               <option value="4" th:selected="${vo.shOption == 4}">대체 코드</option>
+	                                               <option value="5" th:selected="${vo.shOption == 5}">코드 이름</option>
+	                                               <option value="6" th:selected="${vo.shOption == 6}">코드 이름(영문)</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
-                                                <select class="form-control">
-                                                    <option>Y</option>
-                                                    <option>N</option>
+                                                 <select name="shUseNy" id="shUseNy" class="form-control">
+                                                    <option value="" th:selected="${vo.shUseNy == null}">사용여부</option>
+													<option value="1" th:selected="${vo.shUseNy == 1}">Y</option>
+													<option value="0" th:selected="${vo.shUseNy == 0}">N</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -66,10 +68,10 @@
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
-                                                <select class="form-control">
-                                                    <option >날짜</option>
-                                                    <option >등록일</option>
-                                                    <option >수정일</option> 
+                                               <select  id="shOptionDate" name="shOptionDate" class="form-control">
+                                                    <option value="" th:selected="${vo.shOptionDate == null}">날짜</option>
+													<option value="1" th:selected="${vo.shOptionDate == 1}">등록일</option>
+													<option value="2" th:selected="${vo.shOptionDate == 2}">수정일</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -123,9 +125,7 @@
                                                         <th>Id</th>
                                                         <th>password</th>
                                                         <th>email</th>
-                                                        <th>`check`</th>
-                                                        <th>collectCd</th>
-                                                        <th>phoneNumber</th>
+
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -137,19 +137,19 @@
                                                             <input type="checkbox" id="chk5">
                                                             <label class="toggle" for="chk5"></label>
                                                         </td>
-														<!-- <td th:text="${vo.totalRows - ((vo.thisPage - 1) * 
-															vo.rowNumToShow + listStat.index)}"></td> -->
-                                                        <td th:text="${list.memberseq}"></td>
-                                                        <td th:text="${list.firstName}"></td>
-                                                        <td th:text="${list.lastName}"></td>
-                                                        <td th:text="${list.memberGenderCd}"></td>
-                                                        <td th:text="${list.brith}"></td>
-                                                        <td th:text="${list.Id}"></td>
-                                                        <td th:text="${list.password}"></td>
-                                                        <td th:text="${list.email}"></td>
-                                                        <!-- <td th:text="${list.`check`}"></td> -->
-														<td th:text="${list.collectCd}"></td>
-                                                        <td th:text="${list.phoneNumber}"></td>
+													   		 <td th:text="${vo.totalRows - ((vo.thisPage - 1) * 
+															vo.rowNumToShow + listStat.index)}"></td> 
+                                                  <!       <td><a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.memberseq}"></a></td> 
+                                                        <td><a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.firstName}"></a></td>
+                                                        <td><a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.lastName}"></a></td>
+                                                        <td><a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.memberGenderCd}"></a></td>
+                                                        <td><a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.brith}"></a></td>
+                                                        <td><a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.Id}"></a></td>
+                                                        <td><a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.password}"></a></td>
+                                                        <td><a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.email}"></a></td>
+                                                        <td<a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.check}"></td> 
+														<td<a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.collectCd}"></a></a></td>
+                                                        <td<a th:href="@{/xdm/member/MemberXdmMForm?(memberseq=${list.memberseq})}" th:text="${list.phoneNumber}"></a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>

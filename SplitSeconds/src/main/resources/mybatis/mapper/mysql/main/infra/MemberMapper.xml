@@ -57,7 +57,7 @@
 			    WHERE cgDelNy = 0 
 			    ORDER BY cgseq DESC
 	</select> 
-	  
+  
 	  <insert id="insert"> 
 		insert into member (	 
 				  memberseq,
@@ -85,7 +85,7 @@
 			#{phoneNumber}
 		)
 		
-		<selectKey resultType="String" keyProperty="cdseq" order="AFTER">
+		<selectKey resultType="String" keyProperty="memberseq" order="AFTER">
 				SELECT last_insert_id()
 		</selectKey>
 	</insert>

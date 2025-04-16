@@ -15,16 +15,29 @@ public class MemberService {
 	public List<MemberDto> selectList(MemberVo vo){
 		return  memberDao.selectList(vo);
 	}
+	public List<MemberDto> selectListForCodeSelect(MemberVo vo){
+		return  memberDao.selectListForCodeSelect(vo);
+	}
 	
-	public MemberDto selectMember(MemberDto memberDto){
-		return memberDao.selectMember(memberDto);
+	public MemberDto selectOne(MemberDto memberDto){
+		return memberDao.selectOne(memberDto);
 	}
 	public int insert(MemberDto memberDto){
 		return memberDao.insert(memberDto);
 	}
 	
-	public int selectOneCount(){
-		return memberDao.selectOneCount();
+	public int selectOneCount(MemberVo vo){
+		return memberDao.selectOneCount(vo);
+	}
+
+	public int update(MemberDto memberDto){
+		return memberDao.update(memberDto);
+	}
+	public int uelete(MemberDto memberDto){
+		return memberDao.uelete(memberDto);
+	}
+	public int delete(MemberDto memberDto){
+		return memberDao.delete(memberDto);
 	}
  
 }
