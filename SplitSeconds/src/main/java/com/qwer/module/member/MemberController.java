@@ -17,7 +17,7 @@ public class MemberController {
 		vo.setParamsPaging(memberService.selectOneCount());
 	
 //		int a = memberService.selectOneCount();
-		model.addAttribute(memberService.selectList(vo));
+		model.addAttribute("list", memberService.selectList(vo));
 //		model.addAttribute("vo",vo);
 		
 		return "/xdm/member/MemberXdmList";
