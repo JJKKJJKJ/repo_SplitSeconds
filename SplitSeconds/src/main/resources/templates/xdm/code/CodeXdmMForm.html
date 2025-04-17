@@ -10,7 +10,7 @@
             <div class="col">
                 <div class="card">
                 <div class="card-body">
-                    <h1 class="#">Member</h1>
+                    <h1 class="#">code</h1>
 
                     <div class="table-responsive">
                         <div class="col">
@@ -22,118 +22,95 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-3">
                                                     <div>
-                                                    <label for="memberseq">코드그룹 코드<span style="color: red;">*</span></label>
+                                                    <label for="cgseq">코드그룹 코드<span style="color: red;">*</span></label>
                                                     <div class="basic-form">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text"  name="memberseq" id="memberseq"
-                                                                placeholder="자동 생성" readonly="readonly" >
+                                                            <input class="form-control" type="text"  name="cgseq" id="cgseq"
+                                                                placeholder="자동 생성" readonly="readonly">
                                                         </div>
                                                         <br>
                                                     </div>
                                                     </div>
                                                     <div>
-                                                        <label for="cgUseNy">사용 여부<span style="color: red;">*</span></label>
-                                                        <select id="cgUseNy" class="form-control">
-                                                            <option selected="selected" >사용</option>
-                                                            <option selected="selected" >미사용</option>
-                                                         <!--    <option">미사용</option> -->
+                                                        <label for="cdUseNy">사용 여부<span style="color: red;">*</span></label>
+                                                        <select id="cdUseNy" class="form-control">
+                                                            <option selected="selected"">사용</option>
+                                                            <option">미사용</option>
                                                         </select>
                                                         <!-- <h4 class="card-title">Textarea</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group" style="margin-top: 15%;">
-                                                                <label for="cgExplanation" >설명</label>
+                                                                <label for="cdExplanation" >설명</label>
                                                                 <textarea class="form-control h-150px"
-                                                                    rows="6" name="cgExplanation" id="cgExplanation"></textarea>
+                                                                    rows="6" name="cdExplanation" id="cdExplanation"></textarea>
                                                             </div>
                                                         </div>
                                                     </div><!--요기-->
-                                                    <div>
-	                                                    <a href="/xdm/member/MemberXdmList"><button type="button" class="btn btn"><svg
-	                                                                xmlns="http://www.w3.org/2000/svg"
-	                                                                width="16" height="16" fill="currentColor"
-	                                                                class="bi bi-list-task" viewBox="0 0 16 16">
-	                                                                <path fill-rule="evenodd"
-	                                                                    d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z" />
-	                                                                <path
-	                                                                    d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z" />
-	                                                               <path fill-rule="evenodd"
-	                                                                    d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z" />
-	                                                            </svg></button></a> 
-									                            
-									                             <!--    <div class="bootstrap-modal" >  -->
-									                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicModal">
-									                                    	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-								                                            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
-								                                            </svg>
-							                                            </button>
-									                                    <!-- Modal -->
-									                                    <div class="modal fade" id="basicModal">
-									                                        <div class="modal-dialog" role="document">
-									                                            <div class="modal-content">
-									                                                <div class="modal-header">
-									                                                    <h5 class="modal-title">삭제 하시겠습니까?</h5>
-									                                                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-									                                                    </button>
-									                                                </div>
-									                                               
-									                                                <div class="modal-footer">
-									                                                    <button type="button" class="btn btn-secondary"  data-dismiss="modal">취소</button>
-									                                                    <a href="javascript:void(0);"><button button type="button" id="btnSave2" class="btn btn">삭제</button>
-									                                                </div></a>
-									                                            </div>
-									                                        </div>
-									                                    </div>
-									                                <!-- </div> -->
-	                                                      </div> 
-                                                </div>	
-                                                
+													<div><a href="/xdm/code/CodeXdmList"><button type="button" class="btn btn"><svg
+	                                                        xmlns="http://www.w3.org/2000/svg"
+	                                                        width="16" height="16" fill="currentColor"
+	                                                        class="bi bi-list-task" viewBox="0 0 16 16">
+	                                                        <path fill-rule="evenodd"
+	                                                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z" />
+	                                                        <path
+	                                                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z" />
+	                                                        <path fill-rule="evenodd"
+	                                                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z" />
+	                                                    </svg></button></a></div>
+                                                </div>
+
+
                                                 <div class="form-group col-md-3">
                                                     <div class="">
                                                         <!-- <div class=""> -->
                                                         <div></div>
                                                         <div></div>
                                                         <div></div>
-                                                        <label for="cgAnotherseq">코드그룹 코드(ANOTHER)</label>
+                                                        <label for="code_cdseq">코드그룹 코드(seq)</label>
+														<select id="code_cdseq" name="code_cdseq" class="form-control">
+															<option th:each="list : ${list}" th:text="${list.cgName}" th:value="${list.cgseq}"></option>
+                                                        </select>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
-                                                        <div class="basic-form">
+                                                        <!--<div class="basic-form">
                                                             <div class="form-group" >
                                                                 <input class="form-control" type="text" name="cgAnotherseq" id="cgAnotherseq"
-                                                                    placeholder="영대 소문자,숫자" >
+                                                                    placeholder="영대 소문자,숫자">
                                                             </div>
-                                                        </div><br>
-                                                        <label for="cgNum">순서<span style="color: red;">*</span></label>
+                                                        </div>-->
+														<br>
+														<br>
+                                                        <label for="cdNum">순서<span style="color: red;">*</span></label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cgNum" id="cgNum"
-                                                                    placeholder="" >
+                                                                <input class="form-control" type="text" name="cdNum" id="cdNum"
+                                                                    placeholder="">
                                                             </div>
                                                         </div>
                                                         <!-- </div>                   -->
-                                                        
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <div class="">
 
-                                                        <label for="cgName">코드그룹 이름<span style="color: red;">*</span></label>
+                                                        <label for="cdName">코드 이름<span style="color: red;">*</span></label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cgName" id="cgName"
-                                                                    placeholder="한글,영대 소문자,숫자"  >
+                                                                <input class="form-control" type="text" name="cdName" id="cdName"
+                                                                    placeholder="한글,영대 소문자,숫자">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <div class="">
-                                                        <label for="cgNameEng">코드 이름(영문)</label>
+                                                        <label for="cdNameEng">코드 이름(영문)</label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cgNameEng" id="cgNameEng"
-                                                                    placeholder="한글,영대 소문자,숫자"  >
+                                                                <input class="form-control" type="text" name="cdNameEng" id="cdNameEng"
+                                                                    placeholder="한글,영대 소문자,숫자">
                                                             </div>
                                                         </div>
                                                         <br>
@@ -149,7 +126,7 @@
                                                         <br>
                                                         <br>
                                                         <br>
-
+s
                                                         <div class="form-group" style="margin-top: 20.5%;">
                                                             <button type="button" id="btnSave" class="btn btn"
                                                                     style="float: right;"><svg
@@ -172,7 +149,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
                                         </form>
                                     </div>
                                 </div>
@@ -185,21 +161,24 @@
     </div>
 </div>
 </div>
-    <!--**********************************
-        Content body end
-    ***********************************-->
+    <!--**********************************-->
     <script type="text/javascript">
     let form = document.getElementById("form");
     document.getElementById("btnSave").onclick = function(){
-		form.action="/xdm/member/MemberXdmUpdt"
+		form.action="/xdm/code/CodeXdmUpdt"
         form.submit();
     }
 	
     document.getElementById("btnSave2").onclick = function(){
-		form.action="/xdm/member/MemberXdmUelt"
+		form.action="/xdm/code/CodeXdmUelt"
         form.submit();
     }
-
+/* 	document.getElementById("btnSave2").onclick = function(){
+	alert("삭제
+	;
+	form.action="/xdm/code/CodeXdmUelt"
+        form.submit();
+} */ 
 	docum
     </script>
 

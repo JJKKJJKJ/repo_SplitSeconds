@@ -137,14 +137,14 @@
                                                         </td>
 														<!-- <td th:text="${vo.totalRows - ((vo.thisPage - 1) * 
 															vo.rowNumToShow + listStat.index)}"></td> -->
-                                                        <td th:text="${list.cdseq}"></td>
-                                                        <td th:text="${list.cdUseNy}"></td>
-                                                        <td th:text="${list.cdAnotherseq}"></td>
-                                                        <td th:text="${list.cdName}"></td>
-                                                        <td th:text="${list.cdNameEng}"></td>
-                                                        <td th:text="${list.cdNum}"></td>
-														<td th:text="${list.cdDateUp}"></td>
-                                                        <td th:text="${list.cdDateSet}"></td>
+                                                        <td><a th:href="@{/xdm/code/CodeXdmMForm?(cdseq=${list.cdseq})}" th:text="${list.cdseq}"></a></td>
+                                                        <td><a th:href="@{/xdm/code/CodeXdmMForm?(cdseq=${list.cdseq})}" th:text="${list.cdUseNy}"></a></td>
+                                                        <td><a th:href="@{/xdm/code/CodeXdmMForm?(cdseq=${list.cdseq})}" th:text="${list.cdAnotherseq}"></a></td>
+                                                        <td><a th:href="@{/xdm/code/CodeXdmMForm?(cdseq=${list.cdseq})}" th:text="${list.cdName}"></a></td>
+                                                        <td><a th:href="@{/xdm/code/CodeXdmMForm?(cdseq=${list.cdseq})}" th:text="${list.cdNameEng}"></a></td>
+                                                        <td><a th:href="@{/xdm/code/CodeXdmMForm?(cdseq=${list.cdseq})}" th:text="${list.cdNum}"></a></td>
+														<td><a th:href="@{/xdm/code/CodeXdmMForm?(cdseq=${list.cdseq})}" th:text="${list.cdDateUp}"></a></td>
+                                                        <td><a th:href="@{/xdm/code/CodeXdmMForm?(cdseq=${list.cdseq})}" th:text="${list.cdDateSet}"></a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>

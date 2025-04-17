@@ -34,6 +34,11 @@ public class CodeController {
 		model.addAttribute("list",codeGroupService.selectListForCodeSelect(codeGroupVo));
 		return "xdm/code/CodeXdmForm";
 	}
+	@RequestMapping(value = "/xdm/code/CodeXdmMForm")
+	public String codegroupXdmMForm(CodeGroupVo codeGroupVo ) { 
+		return "xdm/code/CodeXdmMForm";
+	}
+	
 	@RequestMapping(value = "/code/CodeXdmInst")
 	public String codeXdmInst(CodeDto codeDto) {
 		
