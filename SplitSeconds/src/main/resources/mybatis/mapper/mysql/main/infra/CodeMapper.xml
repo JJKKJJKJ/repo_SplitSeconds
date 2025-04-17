@@ -56,6 +56,26 @@
 			    WHERE cgDelNy = 0 
 			    ORDER BY cgseq DESC
 	</select> 
+	
+	 <select id="selectOne" resultMap="resultMapObj">
+    SELECT 
+        cdseq,
+		cdAnotherseq,
+		cdName,
+		cdNameEng,
+		cdUseNy,
+		cdNum,
+		cdExplanation,
+		cdDelNy,
+		cdDateUp,
+		cdDateSet,
+		codeGroup_cgseq
+    FROM code 
+    WHERE 1=1
+    AND cdDelNy = 0
+    and cdseq = #{cdseq}
+    ORDER BY cdseq DESC
+	</select>
 	  
 	  <insert id="insert"> 
 		insert into code (	 

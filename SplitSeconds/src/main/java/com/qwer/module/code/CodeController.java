@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.qwer.module.codeGroup.CodeGroupDto;
 import com.qwer.module.codeGroup.CodeGroupService;
 import com.qwer.module.codeGroup.CodeGroupVo;
 @Controller
@@ -34,8 +35,15 @@ public class CodeController {
 		model.addAttribute("list",codeGroupService.selectListForCodeSelect(codeGroupVo));
 		return "xdm/code/CodeXdmForm";
 	}
+	
+	@RequestMapping(value = "/xdm/code/CodeXdmUpdt")
+	public String codeXdmUpdt(CodeDto codeDto) {
+		codeService.update(codeDto);
+		return "redirect:/xdm/code/CodeXdmList";
+	}
 	@RequestMapping(value = "/xdm/code/CodeXdmMForm")
-	public String codegroupXdmMForm(CodeGroupVo codeGroupVo ) { 
+	public String codegroupXdmMForm(CodeDto codeDto , Model model ) { 
+		model.addAttribute("item",codeService.selectOne(codeDto));
 		return "xdm/code/CodeXdmMForm";
 	}
 	

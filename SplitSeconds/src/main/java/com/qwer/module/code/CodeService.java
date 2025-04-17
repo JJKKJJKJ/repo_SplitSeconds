@@ -1,6 +1,5 @@
 package com.qwer.module.code ;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +26,17 @@ public class CodeService {
 	public int selectOneCount(){
 		return codeDao.selectOneCount();
 	}
- 
+	
+	public int update(CodeDto codeDto) {
+		return codeDao.update(codeDto);
+	}
+	
+	public int uelete(CodeDto codeDto) {
+		return codeDao.uelete(codeDto);
+	}
+	
+	public int delete(CodeDto codeDto) {
+		return codeDao.delete(codeDto);
+	}
 	
 }

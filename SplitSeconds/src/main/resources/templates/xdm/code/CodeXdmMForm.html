@@ -42,7 +42,7 @@
                                                             <div class="form-group" style="margin-top: 15%;">
                                                                 <label for="cdExplanation" >설명</label>
                                                                 <textarea class="form-control h-150px"
-                                                                    rows="6" name="cdExplanation" id="cdExplanation"></textarea>
+                                                                    rows="6" name="cdExplanation" id="cdExplanation" th:value="${item.cdExplanation}"></textarea>
                                                             </div>
                                                         </div>
                                                     </div><!--요기-->
@@ -97,7 +97,7 @@
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cdName" id="cdName"
+                                                                <input class="form-control" type="text" name="cdName" id="cdName" th:value="${item.cdName}"
                                                                     placeholder="한글,영대 소문자,숫자">
                                                             </div>
                                                         </div>
