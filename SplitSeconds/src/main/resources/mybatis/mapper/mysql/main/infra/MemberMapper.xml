@@ -89,4 +89,20 @@
 				SELECT last_insert_id()
 		</selectKey>
 	</insert>
+	
+		<update id="update">
+		update member 
+		set	<!-- 여기가 바뀌는 목록을 쓰는데야 -->
+			firstName=#{firstName},
+			lastName=#{lastName},
+			memberGenderCd=#{memberGenderCd},
+			brith=#{brith},
+			Id=#{Id},
+			password=#{password},
+			email=#{email},
+			brith=#{brith} 
+		where 
+			memberseq=#{memberseq} 
+			<!--수정해도 안바껴...-->
+	</update>
 </mapper>

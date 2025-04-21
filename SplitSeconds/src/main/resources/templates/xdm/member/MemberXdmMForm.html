@@ -22,7 +22,7 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-3">
                                                     <div>
-                                                    <label for="memberseq">코드그룹 코드<span style="color: red;">*</span></label>
+                                                    <label for="memberseq">member 코드<span style="color: red;">*</span></label>
                                                     <div class="basic-form">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text"  name="memberseq" id="memberseq"
@@ -31,19 +31,24 @@
                                                         <br>
                                                     </div>
                                                     </div>
-                                                    <div>
-                                                        <label for="cgUseNy">사용 여부<span style="color: red;">*</span></label>
+                                                    
+                                                        <!-- <label for="cgUseNy">성별<span style="color: red;">*</span></label>
                                                         <select id="cgUseNy" class="form-control">
-                                                            <option selected="selected" >사용</option>
-                                                            <option selected="selected" >미사용</option>
-                                                         <!--    <option">미사용</option> -->
-                                                        </select>
+                                                            <option selected="selected" >여성</option>
+                                                            <option selected="selected" >남성</option>
+                                                            <option">미사용</option>
+                                                        </select> -->
+                                                         <label for="Id">ID</label>
+                                                        <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
+                                                        <div class="basic-form">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" name="Id" id="Id"
+                                                                    placeholder="한글,영대 소문자,숫자"  >
+                                                            </div>
                                                         <!-- <h4 class="card-title">Textarea</h4> -->
                                                         <div class="basic-form">
-                                                            <div class="form-group" style="margin-top: 15%;">
-                                                                <label for="cgExplanation" >설명</label>
-                                                                <textarea class="form-control h-150px"
-                                                                    rows="6" name="cgExplanation" id="cgExplanation"></textarea>
+                                                            <div class="form-group"  >
+                                                               
                                                             </div>
                                                         </div>
                                                     </div><!--요기-->
@@ -93,19 +98,19 @@
                                                         <div></div>
                                                         <div></div>
                                                         <div></div>
-                                                        <label for="cgAnotherseq">코드그룹 코드(ANOTHER)</label>
+                                                        <label for="firstName">성(이름)</label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group" >
-                                                                <input class="form-control" type="text" name="cgAnotherseq" id="cgAnotherseq"
+                                                                <input class="form-control" type="text" name="firstName" id="firstName"
                                                                     placeholder="영대 소문자,숫자" >
                                                             </div>
                                                         </div><br>
-                                                        <label for="cgNum">순서<span style="color: red;">*</span></label>
+                                                        <label for="password">비밀번호<span style="color: red;">*</span></label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cgNum" id="cgNum"
+                                                                <input class="form-control" type="password" name="password" id="password"
                                                                     placeholder="" >
                                                             </div>
                                                         </div>
@@ -116,41 +121,43 @@
                                                 <div class="form-group col-md-3">
                                                     <div class="">
 
-                                                        <label for="cgName">코드그룹 이름<span style="color: red;">*</span></label>
+                                                        <label for="lastName">이름<span style="color: red;">*</span></label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cgName" id="cgName"
+                                                                <input class="form-control" type="text" name="lastName" id="lastName"
                                                                     placeholder="한글,영대 소문자,숫자"  >
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div><br>
+                                                        <label for="brith">생일<span style="color: red;">*</span></label>
+                                                        <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
+                                                        <div class="basic-form">
+                                                        <div class="form-group">
+                                                                <input class="form-control" type="date" name="brith" id="brith"
+                                                                    placeholder="" >
+                                                            </div> 
+                                                        </div> 
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <div class="">
-                                                        <label for="cgNameEng">코드 이름(영문)</label>
+                                                    <label for="memberGenderCd">성별<span style="color: red;">*</span></label>
+                                                        <select id="cgUseNy" class="form-control">
+                                                            <option selected="selected" >여성</option>
+                                                            <option selected="selected" >남성</option>
+                                                         <!--    <option">미사용</option> -->
+                                                        </select><br><br>
+                                                        <label for="email">이메일</label>
                                                         <!-- <h4 class="card-title">코드(ANOTHER)</h4> -->
                                                         <div class="basic-form">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" name="cgNameEng" id="cgNameEng"
-                                                                    placeholder="한글,영대 소문자,숫자"  >
+                                                                <input class="form-control" type="email" name="email" id="memberGenderCd"
+                                                                    placeholder="email"  >
                                                             </div>
                                                         </div>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
+                                                   
 
-                                                        <div class="form-group" style="margin-top: 20.5%;">
+                                                        <div class="form-group">
                                                             <button type="button" id="btnSave" class="btn btn"
                                                                     style="float: right;"><svg
                                                                     xmlns="http://www.w3.org/2000/svg"
