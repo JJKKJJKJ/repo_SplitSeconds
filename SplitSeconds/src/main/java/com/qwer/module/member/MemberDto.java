@@ -20,7 +20,7 @@ public class MemberDto {
     private Boolean check;
     private String collectCd;
     private String phoneNumber; 
-    private Integer xCount;
+    private Integer mCount;
 //	-----
 	public String getMemberseq() {
 		return memberseq;
@@ -88,11 +88,11 @@ public class MemberDto {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public Integer getxCount() {
-		return xCount;
+	public Integer getmCount() {
+		return mCount;
 	}
-	public void setxCount(Integer xCount) {
-		this.xCount = xCount;
+	public void setxCount(Integer mCount) {
+		this.mCount = mCount;
 	}
 	
 	

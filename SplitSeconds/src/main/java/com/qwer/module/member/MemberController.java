@@ -6,8 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.qwer.module.codeGroup.CodeGroupDto;
-
 @Controller
 public class MemberController {
 	@Autowired
@@ -35,16 +33,22 @@ public class MemberController {
 		return "/xdm/member/MemberXdmForm";
 	}
 	@RequestMapping(value ="/member/MemberInst")
-	public String memberInst(MemberDto memberDto) {
-		
+	public String memberInst(MemberDto memberDto) { 
 		memberService.insert(memberDto);
 		return "redirect:/xdm/member/MemberXdmList";
 	}
 	@RequestMapping(value ="/xdm/member/MemberXdmMForm") 
 	public String MemberXdmMfom(Model model , MemberDto MemberDto) {
-//		model.addAttribute("item",memberService.selectOne(MemberDto)); 
+		model.addAttribute("item",memberService.selectOne(MemberDto)); 
 		return "/xdm/member/MemberXdmMForm"; 
 	 }
+	
+	
+	@RequestMapping(value = "/member/MemberXdmInst")
+	public String MemberXdmInst(MemberDto memberDto) { 
+		memberService.insert(memberDto);
+		return "redirect:/xdm/member/MemberXdmList";
+	}
 	 
 	
 	@RequestMapping(value = "/xdm/member/MemberXdmUpdt")

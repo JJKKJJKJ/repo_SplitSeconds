@@ -23,6 +23,7 @@
 	  <select id="selectList" resultMap="resultMapObj">
 	    select cc.* from (
 			  select 
+			  (select count(*) from member where 1=1 and memberseq = memberseq) as mCount,
 				  memberseq,
 			      firstName,
 			      lastName,
@@ -41,7 +42,8 @@
 	limit #{rowNumToShow} offset #{startRnumForMysql}
 	</select>
 	
- 	<select id="selectMember" resultMap="resultMapObj">
+ 	<select id="selectOne" resultMap="resultMapObj">
+ 		select 
 				  memberseq,
 			      firstName,
 			      lastName,
@@ -53,14 +55,14 @@
 			      `check`,
 			      collectCd,
 			      phoneNumber
-			    FROM codegroup 
-			    WHERE cgDelNy = 0 
-			    ORDER BY cgseq DESC
+			    FROM member 
+			    WHERE 1=1
+			    AND memberseq = ${memberseq}
+			    ORDER BY memberseq DESC
 	</select> 
   
 	  <insert id="insert"> 
 		insert into member (	 
-				  memberseq,
 			      firstName,
 			      lastName,
 			      memberGenderCd,
@@ -72,7 +74,6 @@
 			      collectCd,
 			      phoneNumber
 		 ) values (			  
-			#{memberseq},
 			#{firstName},
 			#{lastName},
 			#{memberGenderCd},
@@ -99,10 +100,22 @@
 			brith=#{brith},
 			Id=#{Id},
 			password=#{password},
-			email=#{email},
-			brith=#{brith} 
+			email=#{email} 
 		where 
 			memberseq=#{memberseq} 
-			<!--수정해도 안바껴...-->
+			
 	</update>
+	<update id="uelete">
+		UPDAT emember
+		SET
+			 `check` = 1
+		WHERE
+			membereq = #{membereq}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM member
+		WHERE
+			membereq = #{membereq}
+	</delete> 
 </mapper>
